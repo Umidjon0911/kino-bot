@@ -151,7 +151,7 @@ async def user_code_handler(message: Message):
     result = cursor.fetchone()
     if result:
         name, file_id, description = result
-        await message.answer_video(file_id, caption=f"<b>🎞Film nomi</b>👉 {name} 👈\n\n<b>📽Film haqida malumot </b> \n{description}")
+        await message.answer_video(file_id, caption=f"<b>🎞Film nomi</b>{name} \n\n<b>📽Film haqida malumot </b> \n{description}\n\n<b>Ushbu film</b>👉👇<a href='{url}'>Kinolar</a>👈👈 boti orqali yuklab olindi")
     else:
         await message.answer("❌ Bunday kod topilmadi.")
 

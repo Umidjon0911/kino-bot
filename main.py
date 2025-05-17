@@ -12,7 +12,7 @@ from aiogram.types import (
 from aiogram.filters import Command, Filter
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-BOT_TOKEN = "7992004388:AAGNMEKjB2oIvMvFPU35zTNYhqxWurEaoyk"
+BOT_TOKEN = "7992004388:AAHXs5iraV1tcTbUCZZBO7h7FvyDE0oMZNs"
 ADMIN_ID=1101514656
 Kanal_id= -1002045640831
 # Logging

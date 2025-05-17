@@ -145,8 +145,8 @@ async def show_movies(message: Message):
 # Foydalanuvchi kod yuborganida
 @dp.message()
 async def handle_user_code(message: Message):
-    url = "t.me/Filmtomosha_bot"
-    url1 ="t.me/ParsifalPubg"
+    url = "@Filmtomosha_bot"
+    url1 ="@ParsifalPubg"
     if message.from_user.id == ADMIN_ID:
         return
     code = message.text.strip()
@@ -154,7 +154,7 @@ async def handle_user_code(message: Message):
     result = cursor.fetchone()
     if result:
         name, file_id, description = result
-        await message.answer_video(file_id, caption=f"<b>🎞Film nomi</b>{name} \n\n<b>📽Film haqida malumot </b> \n{description}\n\n<b>Ushbu film</b>👉👇<a href='{url}'>Kinolar</a>👈👈 boti orqali yuklab olindi \nBizning hamkor: <a href='{url1}'>Parsifal Pubg</a> kanali")
+        await message.answer_video(file_id, caption=f"<b>🎞Film nomi</b>{name} \n\n<b>📽Film haqida malumot </b> \n{description}\n\nUshbu film👉{url}👈👈 boti orqali yuklab olindi \nBizning hamkor: 🤝{url1}🤝 kanali")
     else:
         await message.answer("❌ Bunday kod topilmadi.")
 

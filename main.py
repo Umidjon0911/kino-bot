@@ -154,11 +154,10 @@ async def handle_user_code(message: Message):
     result = cursor.fetchone()
     if result:
         name, file_id, description = result
-        await message.answer_video(
-            file_id,
-            caption=f"<b>🎞Film nomi</b>{name} \n\n<b>📽Film haqida malumot </b> \n{description}\n\n<b>Ushbu film</b>👉👇<a href='{url}'>Kinolar</a>👈👈 boti orqali yuklab olindi \nBizning hamkor: <a href='{url1}'>Parsifal Pubg</a> kanali")
+        await message.answer_video(file_id, caption=f"<b>🎞Film nomi</b>{name} \n\n<b>📽Film haqida malumot </b> \n{description}\n\n<b>Ushbu film</b>👉👇<a href='{url}'>Kinolar</a>👈👈 boti orqali yuklab olindi \nBizning hamkor: <a href='{url1}'>Parsifal Pubg</a> kanali")
     else:
         await message.answer("❌ Bunday kod topilmadi.")
+
 
 # Ishga tushirish
 async def main():

@@ -144,6 +144,7 @@ async def show_movies(message: Message):
 # Foydalanuvchi kod yuborganida
 @dp.message()
 async def handle_user_code(message: Message):
+    url=https://t.me/Filmtomosha_bot
     if message.from_user.id == ADMIN_ID:
         return
     code = message.text.strip()
@@ -153,7 +154,7 @@ async def handle_user_code(message: Message):
         name, file_id, description = result
         await message.answer_video(
             file_id,
-            caption=f"🎞 Nomi: {name}\n\n📽 Ma’lumot: {description}\n\nKino @Kinotomoshaqil_bot orqali yuborildi"
+            caption=f"🎞 Nomi: {name}\n\n📽 Ma’lumot: {description}\n\nKino <a href='{url}'>"🎬Kinolar🎞"</a> orqali yuborildi"
         )
     else:
         await message.answer("❌ Bunday kod topilmadi.")

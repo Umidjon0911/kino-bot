@@ -12,8 +12,9 @@ from aiogram.types import (
 from aiogram.filters import Command, Filter
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.context import FSMContext
-from config import BOT_TOKEN, ADMIN_ID, Kanal_id
-
+BOT_TOKEN = "7992004388:AAGNMEKjB2oIvMvFPU35zTNYhqxWurEaoyk"
+ADMIN_ID=1101514656
+Kanal_id= -1002045640831
 # Logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
